@@ -57,6 +57,7 @@ a {
 .cta__button {
   display: block;
   width: 70%;
+  max-width: 250px;
   margin: 0 auto;
   font-weight: 500;
   color: #fff;
@@ -66,6 +67,66 @@ a {
 }
 .cta__button:hover {
   background: linear-gradient(#ffa2e5, #a978e3);
+}
+
+.infos {
+  padding: 52px 30px 68px 30px;
+  counter-reset: infosList;
+}
+.infos__heading {
+  font-size: 1.375rem;
+  font-weight: 700;
+  padding-bottom: 30px;
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto;
+}
+.infos__card {
+  font-size: 1.125rem;
+  width: 100%;
+  max-width: 330px;
+  background: #F6F6F6;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.infos__card::before {
+  counter-increment: infosList;
+  content: counter(infosList) "";
+  position: absolute;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+}
+.infos__card h3 {
+  font-weight: bold;
+}
+.infos__card .card-icon {
+  margin-right: 25px;
+  color: #7E7E7E;
+}
+.infos__card--active {
+  background: #f2eafb;
+}
+.infos__card--active .card-icon {
+  color: #9356DC;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .sub-header {
@@ -86,7 +147,7 @@ a {
   margin: 0;
   padding: 1.06rem 0;
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   color: inherit;
 }
 .sub-header__text i {
