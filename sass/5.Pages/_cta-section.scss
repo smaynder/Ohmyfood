@@ -1,0 +1,32 @@
+.cta {
+    background: $back-secondary;
+    padding: 50px 25px;
+    text-align: center;
+
+    &__heading {
+        font-size: 1.65rem;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+
+    &__details {
+        font-size: 1.125rem;
+        font-weight: 300;
+        padding-bottom: 30px;
+    }
+
+    &__button {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+        font-weight: 500;
+        color: #fff;
+        padding: 16px 20px;
+        background: linear-gradient($color-secondary, $color-primary);
+        border-radius: 28px;
+
+        &:hover {
+            background: linear-gradient(lighten($color-secondary, 8%) , lighten($color-primary, 8%) );
+        }
+    }
+}

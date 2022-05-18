@@ -39,6 +39,35 @@ a {
   color: #353535;
 }
 
+.cta {
+  background: #F6F6F6;
+  padding: 50px 25px;
+  text-align: center;
+}
+.cta__heading {
+  font-size: 1.65rem;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.cta__details {
+  font-size: 1.125rem;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+.cta__button {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  font-weight: 500;
+  color: #fff;
+  padding: 16px 20px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 28px;
+}
+.cta__button:hover {
+  background: linear-gradient(#ffa2e5, #a978e3);
+}
+
 .sub-header {
   background: #EAEAEA;
   color: #353535;
