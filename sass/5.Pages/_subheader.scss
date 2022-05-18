@@ -1,0 +1,27 @@
+.sub-header {
+    background: $back-tertiary;
+    color: $back-footer;
+    position: Relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 15px;
+        top: 0;
+        left: 0;
+        box-shadow: 0 10px 10px -12px rgba(0, 0, 0, 0.3) inset;
+    }
+
+    &__text {
+        margin: 0;
+        padding: 1.06rem 0;
+        text-align: center;
+        font-weight: 500;
+        color: inherit;
+
+        i {
+            margin-right: 10px;
+        }
+    }
+}

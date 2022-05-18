@@ -1,0 +1,17 @@
+.header {
+    background: $back-primary;
+    width: 100%;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.34);
+
+    position: relative;
+
+    &__logo {
+        font-size: 32px;
+        font-family: 'Shrikhand', serif;
+        color: $color-logo;
+    }
+}
