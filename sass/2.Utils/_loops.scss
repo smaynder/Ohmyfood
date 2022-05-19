@@ -1,0 +1,7 @@
+@for $i from 1 through 10 { // Apparition des élements de menu en différé
+    .card#{$i} {
+        opacity: 0;
+        animation: elementAppear .3s both;
+        animation-delay: calc(1.1s + $i * 0.25s);
+    }
+}

@@ -109,43 +109,6 @@
     }
 }
 
-@keyframes slider {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        transform: scaleX(100%);
-    }
-}
-
-@keyframes elementAppear {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-@keyframes rotate360 {
-    0% {
-        transform: rotate(0);
-}
-100% {
-        transform: rotate(360deg);
-    }
-}
-
-@for $i from 1 through 10 {
-    .card#{$i} {
-        opacity: 0;
-        animation: elementAppear .3s both;
-        animation-delay: calc($i * 0.2s);
-    }
-}
-
 @media only screen and (min-width:1200px) {
     .menu {
         flex-direction: row;
