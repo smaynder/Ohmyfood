@@ -28,45 +28,129 @@
 <body>
     <!-- HEADER -->
     <header class="header">
-        <!-- <div class="header__return">
-            <a href="/index.html"><i class="fa-solid fa-arrow-left"></i></a>
-        </div> -->
-        <div class="header__logo">
-            <a href="/index.html">ohmyfood</a>
-        </div>
+        <a href="/index.html">
+            <img class="header__logo" src="./assets/logo/ohmyfood@2x.svg" alt="Logo ohmyfood">
+        </a>
     </header>
 
-    <!-- SUB-HEADER -->
-    <div class="sub-header">
-        <p class="sub-header__text">
-            <i class="fa-solid fa-location-dot"></i>
-            Paris, Belleville
-        </p>
-    </div>
-
     <!-- CALL-TO-ACTION SECTION -->
-    <section class="cta">
-        <h1 class="cta__heading">Réservez le menu qui vous convient</h1>
-        <h2 class="cta__details">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h2>
-        <a href="#restaurants" class="cta__button">Explorer nos restaurants</a>
-    </section>
+    <section class="cta-section">
 
-    <section class="infos">
-        <h2 class="infos__heading">Fonctionnement</h2>
-        <div class="card-container">
-            <article class="infos__card">
-                <i class="fa-solid fa-mobile-screen-button card-icon"></i>
-                <h3>Choississez un restaurant</h3>
-            </article>
-            <article class="infos__card">
-                <i class="fa-solid fa-list-ul card-icon"></i>
-                <h3>Composez votre menu</h3>
-            </article>
-            <article class="infos__card infos__card--active">
-                <i class="fa-solid fa-store card-icon"></i>
-                <h3>Dégustez au restaurant</h3>
-            </article>
+        <!-- SUB-HEADER -->
+        <div class="sub-header">
+            <div class="sub-header__text">
+                <i class="fa-solid fa-location-dot"></i>
+                <address>Paris, Belleville</address>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta">
+            <h1 class="cta__heading">Réservez le menu qui vous convient</h1>
+            <h2 class="cta__details">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h2>
+            <a href="#restaurant" class="cta__button">Explorer nos restaurants</a>
         </div>
     </section>
+
+    <!-- INFORMATIONS SECTION -->
+    <section class="infos">
+        <h2 class="infos__heading">Fonctionnement</h2>
+        <ol class="card-container">
+            <li class="infos__card">
+                <i class="fa-solid fa-mobile-screen-button card-icon"></i>
+                <h3>Choississez un restaurant</h3>
+            </li>
+            <li class="infos__card">
+                <i class="fa-solid fa-list-ul card-icon"></i>
+                <h3>Composez votre menu</h3>
+            </li>
+            <li class="infos__card infos__card--active">
+                <i class="fa-solid fa-store card-icon"></i>
+                <h3>Dégustez au restaurant</h3>
+            </li>
+        </ol>
+    </section>
+
+    <!-- RESTAURANTS GRID SECTION -->
+    <main class="main" id="restaurant">
+        <section class="menu-list">
+
+            <h2 class="menu-list__heading">Restaurants</h2>
+
+            <article class="list-card">
+                <a href="/carte-la-palette-du-gout.html">
+                    <img src="/assets/cards/la_palette_du_gout.jpg" alt="plat de restaurant" class="list-card__image">
+                    <div class="list-card__heading">
+                        <div class="list-card__heading__name">
+                            <h3>La palette du goût</h3>
+                            <h4>Ménilmontant</h4>
+                        </div>
+                        <div class="list-card__heading__like">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </a>
+                <span class="new">Nouveau</span>
+            </article>
+
+            <article class="list-card">
+                <a href="#">
+                    <img src="/assets/cards/la_note_enchantee.jpg" alt="plat de restaurant" class="list-card__image">
+                    <div class="list-card__heading">
+                        <div class="list-card__heading__name">
+                            <h3>La note enchantée</h3>
+                            <h4>Charonne</h4>
+                        </div>
+                        <div class="list-card__heading__like">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </a>
+                <span class="new">Nouveau</span>
+            </article>
+
+            <article class="list-card">
+                <a href="#">
+                    <img src="/assets/cards/a_la_francaise.jpg" alt="plat de restaurant" class="list-card__image">
+                    <div class="list-card__heading">
+                        <div class="list-card__heading__name">
+                            <h3>A la française</h3>
+                            <h4>Cité Rouge</h4>
+                        </div>
+                        <div class="list-card__heading__like">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="list-card">
+                <a href="#">
+                    <img src="/assets/cards/le_delice_des_sens.jpg" alt="plat de restaurant" class="list-card__image">
+                    <div class="list-card__heading">
+                        <div class="list-card__heading__name">
+                            <h3>Le délice des sens</h3>
+                            <h4>Folie-Méricourt</h4>
+                        </div>
+                        <div class="list-card__heading__like">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h2 class="footer__heading">ohmyfood</h2>
+        <ul class="footer__list">
+            <li class="list-icon"><i class="fa-solid fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
+            <li class="list-icon"><i class="fa-solid fa-handshake-angle"></i><a href="#">Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:#">Contact</a></li>
+        </ul>
+    </footer>
 </body>
 </html>

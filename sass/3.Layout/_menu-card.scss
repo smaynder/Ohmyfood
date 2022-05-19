@@ -1,0 +1,145 @@
+.menu {
+    display: grid;
+    
+    grid-template-rows: 68px;
+    grid-template-columns: 100%;
+    grid-gap: 16px;
+
+    margin: 15px;
+
+    opacity: 0;
+    animation: gridAppear .3s both;
+    animation-delay: .5s;
+}
+
+.menu__title {
+    width: 100%;
+
+    margin-top: 25px;
+    padding-top: auto;
+    padding-bottom: 0;
+
+    text-transform: uppercase;
+
+    &::after {
+        content: '';
+        background: $color-tertiary;
+        display: block;
+        height: 3px;
+        width: 40px;
+        margin-top: 5px;
+    }
+}
+
+.menu__card {
+    background: #fff;
+    width: 100%;
+    cursor: pointer;
+
+    padding: 15px;
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.15);
+
+    &__add {
+        display: none;
+        position: absolute;
+        background: $color-tertiary;
+        border-radius: 0 15px 15px 0;
+        right: 0;
+        padding: 0 18px;
+        height: 100%;
+
+        i {
+            font-size: 20px;
+            color: white;
+            animation: rotate360 0.5s both;
+        }
+    }
+
+    &:hover {
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    &:hover .menu__card {
+        padding-right: 56px;
+        transition: 0.5s ease;
+    }
+
+    &:hover .menu__card__add {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        animation: slider 0.5s ease;
+        transform-origin: right;
+    }
+}
+
+.menu__card__heading {
+    display: flex;
+    
+    &__name {
+        overflow: hidden;
+        white-space: nowrap;
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        h4 {
+            margin: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-weight: 400;
+        }
+    }
+
+    &__price {
+        font-weight: 700;
+        align-self: flex-end;
+    }
+}
+
+@keyframes slider {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(100%);
+    }
+}
+
+@keyframes gridAppear {
+    0% {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0);
+}
+100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .menu {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 68px 68px 68px;
+        grid-auto-flow: column;
+    }
+}

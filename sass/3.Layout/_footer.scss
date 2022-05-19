@@ -1,0 +1,30 @@
+.footer {
+    background: $back-footer;
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+
+    &__heading {
+        font-family: 'Shrikhand', serif;
+        font-size: 1.25rem;
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        position: relative;
+
+        li {
+            padding-bottom: 8px;
+        }
+
+        .list-icon {
+            padding-left: 25px;
+
+            i {
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+}

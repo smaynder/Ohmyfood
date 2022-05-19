@@ -1,12 +1,14 @@
+@import "./2.Utils/variables";
+@import "./2.Utils/mixins";
+
 @import "./1.Base/base";
 
-@import "./2.Utils/variables";
-
 @import "./3.Layout/header";
+@import "./3.Layout/menu-card";
 @import "./3.Layout/footer";
 
-@import "./4.Composants/return.scss";
+@import "./4.Composants/return";
 
 @import "./5.Pages/cta-section";
 @import "./5.Pages/info-section";
-@import "./5.Pages/subheader";
+@import "./5.Pages/main-section";

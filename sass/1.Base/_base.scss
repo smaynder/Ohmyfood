@@ -4,11 +4,14 @@
 
 html {
     font-size: 16px;
+    background: $back-secondary;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
+    margin: auto;
+    max-width: 1200px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
 }
 
 a {
