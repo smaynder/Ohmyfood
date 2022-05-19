@@ -5,10 +5,8 @@
     grid-template-columns: 100%;
     grid-gap: 16px;
 
-    margin: 15px;
-
     opacity: 0;
-    animation: gridAppear .3s both;
+    animation: elementAppear .3s both;
     animation-delay: .5s;
 }
 
@@ -66,7 +64,7 @@
         box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
     }
 
-    &:hover .menu__card {
+    &:hover .menu__card__heading {
         padding-right: 56px;
         transition: 0.5s ease;
     }
@@ -83,6 +81,8 @@
 
 .menu__card__heading {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     
     &__name {
         overflow: hidden;
@@ -116,7 +116,7 @@
     }
 }
 
-@keyframes gridAppear {
+@keyframes elementAppear {
     0% {
         opacity: 0;
         transform: translateX(150px);
@@ -138,8 +138,17 @@
 
 @media only screen and (min-width:1200px) {
     .menu {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 376px 376px 376px;
         grid-template-rows: 1fr 68px 68px 68px;
         grid-auto-flow: column;
+    }
+
+    .menu__card__heading__name {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    h4 {
+        text-overflow: ellipsis;
     }
 }
