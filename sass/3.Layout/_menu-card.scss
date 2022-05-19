@@ -1,21 +1,21 @@
 .menu {
-    display: grid;
-    
-    grid-template-rows: 68px;
-    grid-template-columns: 100%;
-    grid-gap: 16px;
+    display: flex;
+    flex-direction: column;
 
-    opacity: 0;
-    animation: elementAppear .3s both;
-    animation-delay: .5s;
+    &--starter,
+    &--dish,
+    &--dessert {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
 }
 
 .menu__title {
     width: 100%;
-
     margin-top: 25px;
-    padding-top: auto;
-    padding-bottom: 0;
+    height: fit-content;
 
     text-transform: uppercase;
 
@@ -91,6 +91,8 @@
         h3 {
             font-size: 18px;
             font-weight: 700;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
 
         h4 {
@@ -119,7 +121,7 @@
 @keyframes elementAppear {
     0% {
         opacity: 0;
-        transform: translateX(150px);
+        transform: translateY(30px);
     }
     100% {
         opacity: 1;
@@ -136,19 +138,25 @@
     }
 }
 
+@for $i from 1 through 10 {
+    .card#{$i} {
+        opacity: 0;
+        animation: elementAppear .3s both;
+        animation-delay: calc($i * 0.2s);
+    }
+}
+
 @media only screen and (min-width:1200px) {
     .menu {
-        grid-template-columns: 376px 376px 376px;
-        grid-template-rows: 1fr 68px 68px 68px;
-        grid-auto-flow: column;
-    }
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
 
-    .menu__card__heading__name {
-        overflow: hidden;
-        white-space: nowrap;
-    }
-
-    h4 {
-        text-overflow: ellipsis;
+        &--starter,
+        &--dish,
+        &--dessert {
+            width: 32%;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        }
     }
 }

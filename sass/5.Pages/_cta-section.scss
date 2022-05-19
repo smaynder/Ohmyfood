@@ -74,3 +74,14 @@
         }
     }
 }
+
+@media only screen and (min-width:1200px) {
+
+    .cta__button--sm {
+        margin-top: 0;
+    }
+    
+    .margintop {
+        margin-top: 50px;
+    }
+}
