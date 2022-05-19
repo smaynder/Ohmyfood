@@ -48,15 +48,21 @@
         }
 
         &__like {
-            font-size: 26px;
+            font-size: 28px;
+            position: relative;
             
             i {
                 transition: -webkit-text-fill-color .25s;
+                height: 30px;
+                width: 30px;
+                padding: 2px;
+                
                 &:hover {
                     cursor: pointer;
                     font-weight: 700;
-                    background: -webkit-gradient(linear, right top, left bottom, from($color-primary), to($color-secondary));
+                    background: linear-gradient(190deg, #9356DC, #FF79DA);
                     background-clip: text;
+                    -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
             }
