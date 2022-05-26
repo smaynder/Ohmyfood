@@ -558,15 +558,6 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
-@media only screen and (min-width: 850px) {
-  .menu-list {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 5fr 5fr;
-  }
-  .menu-list__heading {
-    grid-column: span 2;
-  }
-}
 .new {
   position: absolute;
   top: 15px;
@@ -576,6 +567,16 @@ a {
   font-weight: bold;
   background: #99E2D0;
   color: #32b091;
+}
+
+@media only screen and (min-width: 650px) {
+  .menu-list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr 5fr;
+  }
+  .menu-list__heading {
+    grid-column: span 2;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

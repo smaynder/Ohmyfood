@@ -71,17 +71,6 @@
     }
 }
 
-@media only screen and (min-width:850px) {
-    .menu-list {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 5fr 5fr;
-
-        &__heading {
-            grid-column: span 2;
-        }
-    }
-}
-
 .new {
     position: absolute;
     top: 15px;
@@ -91,4 +80,15 @@
     font-weight: bold;
     background: $color-tertiary;
     color: darken($color-tertiary, 30%);
+}
+
+@media only screen and (min-width:650px) {
+    .menu-list {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 5fr 5fr;
+
+        &__heading {
+            grid-column: span 2;
+        }
+    }
 }
